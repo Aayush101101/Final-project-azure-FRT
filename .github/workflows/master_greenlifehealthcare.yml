@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'GreenLifeHealthCare'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B5101843AD054819882167B213A03D67 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_23085CE351D14270800BC4C57794F05D }}
