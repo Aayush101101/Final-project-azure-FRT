@@ -120,11 +120,11 @@ def BloodTestformsubmit():
        city = request.form.get('City')
        pincode = request.form.get('pincode')
 
-       Bloodtest_db = bloodtest_db( fname = fname, lname = lname ,phone1 = phone1,mail = email,bdate = dbate,visit = visit,date_ = date,visit_time = visit_time,address = address,city= city,pincode = pincode)
+       Bloodtest_db = bloodtest_db( fname = fname, lname = lname ,phone1 = phone1,mail = email,bdate = bdate,visit = visit,date_ = date,visit_time = visit_time,address = address,city= city,pincode = pincode)
        db.session.add(Bloodtest_db)
        db.session.commit()
     allbloodtest = Bloodtest_db.query.all()
-    b = allappointment[-1]
+    b = allbloodtest[-1]
 
     return render_template('Thank_You_bloodtest.html',b=b,fname =fname,lname=lname,visit_time =visit_time,date=date, address=address)
 
