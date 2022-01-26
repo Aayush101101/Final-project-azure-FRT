@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GREENLIFE HEALTHCARE|Hospital-Documents </title>
+        <link rel="stylesheet" href="../static/css/Style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/491ca79f60.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="{{ url_for ('index')}}"><img class="section-logo" src="../static/Images/LOGO.jpeg" alt=""></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fas fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="{{ url_for ('index')}}">HOME</a></li>
+                        
+                        <li><a href="{{ url_for ('appointment')}}">APPOINTMENT</a></li>
+                        <li><a href="{{ url_for ('documents')}}">HOSPITAL DOCUMENT</a></li>
+                        
+                    </ul>
+                    
+                </div>
+                <i class="fas fa-bars fa-lg" onclick="showMenu()"></i>
+    
+            </nav>
+            <div class="text-box">
+                <h1>GREENLIFE HEALTHCARE <br> Hospital Appointment</h1>
+                
+            </div>
+        </section>
+    <section class="Infratructure2">
+        <h1>Appointments</h1>
+        <div class="row">
+            <div class="Infratructure2-col">
+                <a href="{{url_for('HealthCheckUpForm')}}"><img class="Infratructure2-img" src="../static/Images/important-documents.jpg" alt="HealthCheckUpForm">
+                <div class="layer">
+                    <h3>Health Check-Up</h3>
+                 </div> 
+                </a>           
+            </div>
+            <div class="Infratructure2-col">
+                <a href="{{url_for('BloodTestForm')}}"><img class="Infratructure2-img" src="../static/Images/analysis-g4dc3ccdf0_1280.jpg" alt="BloodTestForm">
+                <div class="layer">
+                    <h3>Blood Test</h3>
+                 </div> 
+                </a>           
+            </div>
+        </div>
+    </section>
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right ="0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+
+
+
+    </script>
+
+    
+
+    
+
+ 
+    
+</body>
+</html>
