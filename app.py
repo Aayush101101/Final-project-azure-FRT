@@ -101,8 +101,9 @@ def HealthCheckUpformsubmit():
        db.session.add(appointment_db)
        db.session.commit()
     allappointment = Appointment_db.query.all()
+    b = allappointment[-1]
     
-    return render_template('Thank_You_appointment.html',allappointment=allappointment,visit_time =visit_time,date = date ,physician =physician)
+    return render_template('Thank_You_appointment.html',b=b,visit_time =visit_time,date = date ,physician =physician)
 
 @app.route("/BloodTestformsubmit",methods=['POST'])
 def BloodTestformsubmit():
@@ -123,8 +124,9 @@ def BloodTestformsubmit():
        db.session.add(Bloodtest_db)
        db.session.commit()
     allbloodtest = Bloodtest_db.query.all()
+    b = allappointment[-1]
 
-    return render_template('Thank_You_bloodtest.html',allbloodtest = allbloodtest,fname =fname,lname=lname,visit_time =visit_time,date=date, address=address)
+    return render_template('Thank_You_bloodtest.html',b=b,fname =fname,lname=lname,visit_time =visit_time,date=date, address=address)
 
 @app.route("/healthAppointmentdetails") 
 def healthAppointmentdetails():
